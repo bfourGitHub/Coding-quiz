@@ -12,23 +12,25 @@ console.log(person.age);
 
 //Alert when user arrives to page: Gives explanation of how to use the quiz
 
-alert("Hello! When you click start your time will begin for the quiz! Note: Incorrect answers deduct 10 seconds from the time remaining! Good Luck! You got this!");
+//alert("Hello! When you click start your time will begin for the quiz! Note: Incorrect answers deduct 10 seconds from the time remaining! Good Luck! You got this!");
 
 //Countdown clock, Displaying starting time and time remaining, updates as the questions are answered correctly or Incorrectly
 //setInterval when the quiz begins(clicking start)
 
 function startTimer() {
-    setTime();
+  setTime();
   
-    // We only want to start the timer if totalSeconds is > 0
-    if (totalSeconds > 0) {
-      /* The "interval" variable here using "setInterval()" begins the recurring increment of the
-         secondsElapsed variable which is used to check if the time is up */
-        interval = setInterval(function() {
-          secondsElapsed++;
-  
-          // So renderTime() is called here once every second.
-          renderTime();
+  // We only want to start the timer if totalSeconds is > 0
+  if (totalSeconds > 0) {
+    /* The "interval" variable here using "setInterval()" begins the recurring increment of the
+    secondsElapsed variable which is used to check if the time is up */
+    interval = setInterval(function() {
+      secondsElapsed++;
+      console.log(secondsElapsed);
+      
+      // So renderTime() is called here once every second.
+      renderTime();
+      
         }, 1000);
     } else {
       alert("Minutes of work/rest must be greater than 0.")
