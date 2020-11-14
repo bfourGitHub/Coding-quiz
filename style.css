@@ -6,11 +6,28 @@
     
 }
 
-.main {
+#main {
     display: flex;
     align-items: center;
     justify-content: center;
+   
 }
 
-
+#container-card {
+    display: flexbox;
+    flex-flow: wrap;
+    align-items: center;
+    padding: 25px;
+    border-style: dashed;
+    border-color: blue;
+    border-width: 2px;
     
+}
+
+.buttons {
+    border-style: double;
+    border-radius: 3px;
+    border-color: red;
+    display: flexbox;
+    justify-content: center;
+}
