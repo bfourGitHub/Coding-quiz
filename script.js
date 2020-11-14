@@ -8,10 +8,11 @@ person.name = 'Silas';
 person['name'] = 'Andy';
 
 console.log(person.name);
+console.log(person.age);
 
 //Alert when user arrives to page: Gives explanation of how to use the quiz
 
-alert("Hello! When you click start your time will begin for the quiz!    Note: Incorrect answers deduct 30 seconds from the time remaining! Good Luck! You got this!");
+alert("Hello! When you click start your time will begin for the quiz! Note: Incorrect answers deduct 10 seconds from the time remaining! Good Luck! You got this!");
 
 //Countdown clock, Displaying starting time and time remaining, updates as the questions are answered correctly or Incorrectly
 //setInterval when the quiz begins(clicking start)
