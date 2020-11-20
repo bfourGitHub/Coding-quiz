@@ -24,10 +24,12 @@
     
 }
 
-.buttons {
+button {
     border-style: double;
     border-radius: 3px;
     border-color: red;
-    display: flexbox;
-    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
 }
