@@ -49,6 +49,7 @@ function displayQuestions() {
   var questionTitle = document.createElement("P")
   questionTitle.textContent = questions[0].title;
   mainEl.append(questionTitle);
+  
   var rightOrWrongDisplay = document.createElement("P");
 
   for (var i = 0; questions[questionIndex].choices[i]; i++) {
@@ -107,14 +108,6 @@ function saveUserInitials () {
   document.getElementById("highScoresPage").innerHTML=tempUserDetails
 };
 
-//Alert when user arrives to page: Gives explanation of how to use the quiz
-
-//alert("Hello! When you click start your time will begin for the quiz! Note: Incorrect answers deduct 10 seconds from the time remaining! Good Luck! You got this!");
-
-//Countdown clock, Displaying starting time and time remaining, updates as the questions are answered correctly or Incorrectly
-//setInterval when the quiz begins(clicking start)
-
-
 
 function startTimer() {
   //setTime();
@@ -153,21 +146,6 @@ function stopTimer() {
 
 }
 
-
-
-
-//FUNCTION required to do the following:
-//IF the answer is incorrect ALERT? AND Subtract Time AND go to the next question
-//Click event listener for the user selection: selectedAnswerQ1, selectedAnswerQ2 etc
-//addEventListener(click);
-
-
-//For every incorrect answer time is subtracted from the clock
-//The game is over when all the questions are answered or when the time reaches 0 
-//Clear interval
-//Save initials for high scores
-
-//GIVEN I am taking a code quiz
 
 
 //Add eventlistener for click
