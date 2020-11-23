@@ -10,7 +10,7 @@ var questionIndex = 0;
 var questions = [
   {
     title: "Who is the most awarded solo artist in American Music Awards history?",
-    choices: ["Michael Jackson", "Adele", "Taylor Swift", "Garth Brooks"],
+    choices: ["Michael Jackson", "Taylor Swift", "Adele", "Garth Brooks"],
     answer: "Taylor Swift"
   },
   {
@@ -19,19 +19,19 @@ var questions = [
     answer: 'var taylorSwiftAmaWins = 32'
   },
   {
-    title: "How do you create a function in JavaScript?",
-    choices: ["function = myFunction()", "function:myFunction", "function myFunction()", "Int Main(args)"],
-    answer: "function myFunction()"
+    title: "There are many iconic red carpet looks. Arguably one of the most iconic was worn by Britney Spears and Justin Timberlake to the 2001 AMAs. What did they wear?",
+    choices: ["All white, with pearls.", "Matching denim-on-denim", "Matching black and white pant-suits", "Black lace and leather"],
+    answer: "Matching denim-on-denim"
   },
   {
-    title: "How to write an IF statement in JavaScript?",
-    choices: ["if (i==5)", "if i=5 then", "if i = 5", "if i == 5 then"],
-    answer: "if (i==5)"
+    title: "Aerosmith performed at the 2001 Super Bowl Halftime Show with all of the following artists EXCEPT which one?",
+    choices: ["Britney Spears", "N'Sync", "Mary J Blige", "Missy Elliot"],
+    answer: "Missy Elliot"
   },
   {
-    title: "How do you call a function named 'myFunction'?",
-    choices: ["call myFunction()", "call function myFunction()", "myFunction()", "void 'myFunction()' "],
-    answer: "myFunction()"
+    title: "Which of the following artists won the Grammy Award for Best New Artist?",
+    choices: ["Norah Jones", "Amy Winehouse", "Mariah Carey", "John Legend", "All of the Above"],
+    answer: "All of the Above"
   }
 ];
 
@@ -52,15 +52,14 @@ function displayQuestions() {
     
     var questionTitle = document.createElement("P")
     questionTitle.textContent = questions[questionIndex].title;
-    console.log(questionTitle);
-    console.log(questionIndex);
+    
     mainEl.append(questionTitle);
   
     var rightOrWrongDisplay = document.createElement("P");
     
 
   for (var i = 0; questions[questionIndex].choices[i]; i++) {
-    console.log(questions[questionIndex].choices[i]);
+    //console.log(questions[questionIndex].choices[i]);
     var choiceButton = document.createElement("BUTTON");
     choiceButton.textContent = questions[questionIndex].choices[i];
     choiceButton.classList.add("answerButtons");
