@@ -9,14 +9,14 @@ var questionIndex = 0;
 //Quiz questions, choices and answers stored as an array of objects in the questions variable
 var questions = [
   {
-    title: "What is the HTML tag under which one can write the JavaScript code?",
-    choices: ["<javascript>", "<scripted>", "<script>", "<js>"],
-    answer: "<script>"
+    title: "Who is the most awarded solo artist in American Music Awards history?",
+    choices: ["Michael Jackson", "Adele", "Taylor Swift", "Garth Brooks"],
+    answer: "Taylor Swift"
   },
   {
-    title: "What is the correct syntax for referring to an external script called 'script.js'?",
-    choices: ['<script src="script.js">', '<script href="script.js">', '<script ref="script.js">', '<script name="script.js">'],
-    answer: '<script src="script.js">'
+    title: "Declare the variable 'taylorSwiftAmaWins' and give it the value equal to the number of AMAs Taylor Swift currently holds.",
+    choices: ['var Taylor-Swift-32 = taylorSwiftAmaWins', 'taylorSwiftAmaWins = 23amas', 'var taylorSwiftAmaWins = 32', 'var = taylorSwiftAmaWins(32)'],
+    answer: 'var taylorSwiftAmaWins = 32'
   },
   {
     title: "How do you create a function in JavaScript?",
@@ -44,19 +44,23 @@ function displayQuestions() {
   if (questionIndex === questions.length) {
     console.log("quiz done");
     //clearInterval(interval);
+    timerEl.innerHTML = "You've completed the POP quiz!"
     highScoreInput();
   }
   else {
 
+    
     var questionTitle = document.createElement("P")
-    questionTitle.textContent = questions[0].title;
+    questionTitle.textContent = questions[questionIndex].title;
+    console.log(questionTitle);
+    console.log(questionIndex);
     mainEl.append(questionTitle);
   
     var rightOrWrongDisplay = document.createElement("P");
-
+    
 
   for (var i = 0; questions[questionIndex].choices[i]; i++) {
-    //console.log(questions[questionIndex].choices[i]);
+    console.log(questions[questionIndex].choices[i]);
     var choiceButton = document.createElement("BUTTON");
     choiceButton.textContent = questions[questionIndex].choices[i];
     choiceButton.classList.add("answerButtons");
@@ -72,7 +76,6 @@ function displayQuestions() {
         highScoreInput();
           
       }
-
 
       else if (e.target.textContent === questions[questionIndex].answer) {
         console.log("correct");
@@ -102,7 +105,6 @@ function highScoreInput () {
   mainEl.innerHTML = `<input id= "userInitials">  <button id= "saveUserInitials" onclick="saveUserInitials()">Save</button> <br> <h3>High Scores:</h3>`
   clearInterval(interval);
   
-  
 };
 
 function saveUserInitials () {
@@ -126,7 +128,7 @@ function startTimer() {
   //setTime();
 
   // We only want to start the timer if totalSeconds is > 0
-  //if (timeRemaining > 0) {
+  if (timeRemaining > 0) {
     /* The "interval" variable here using "setInterval()" begins the recurring increment of the
     secondsElapsed variable which is used to check if the time is up */
     interval = setInterval(function () {
@@ -135,35 +137,9 @@ function startTimer() {
       timerEl.innerHTML = "Time Remaining: " + timeRemaining;
 
     }, 1000);
-  //};
-  if (timeRemaining === 0){
-    console.log("Taylor swift");
-    
   };
+  
 };
-
-// if (timeRemaining < 0) {
-//   console.log("Taylor Swift");
-// };
-/* This function stops the setInterval() set in startTimer but does not
-   reset the secondsElapsed variable and does not reset the time by calling "setTime()" */
-// function pauseTimer() {
-//   if (timeRemaining <= 0){
-//     clearInterval(startTimer);
-//     console.log("Britney Spears");
-//   }
-// };
-
-/* This function stops the interval and also resets secondsElapsed
-   and calls "setTime()" which effectively reset the timer
-   to the input selections workMinutesInput.value and restMinutesInput.value */
-// function stopTimer() {
-//   secondsElapsed = 0;
-//   setTime();
-
-// }
-
-
 
 //Add eventlistener for click
 console.log(startButton);
