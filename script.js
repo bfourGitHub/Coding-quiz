@@ -32,6 +32,11 @@ var questions = [
     title: "Which of the following artists won the Grammy Award for Best New Artist?",
     choices: ["Norah Jones", "Amy Winehouse", "Mariah Carey", "John Legend", "All of the Above"],
     answer: "All of the Above"
+  },
+  {
+    title: "According to pop culture tradition, who/what decides when the Christmas season begins?",
+    choices: ["Whenever coffee shops run out of pumpkin spice", "the date on the calendar", "Mariah Carey", "Lighting of the Rockefeller Center Xmas Tree"],
+    answer: "Mariah Carey"
   }
 ];
 
