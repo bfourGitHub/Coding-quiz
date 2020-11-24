@@ -72,10 +72,7 @@ button {
     
 }
 
-#highScoresPage p {
-    display: flex;
-    justify-content: center;
-}
+
 
 .answerButtons {
     display: flex;
@@ -93,4 +90,11 @@ p {
     max-width: 625px;
     line-height: 1.5;
     font-size: 1.1em;
+}
+
+#highScoresPage p {
+    display: flex;
+    max-width: 100%;
+    align-items: center;
+    justify-content: center;
 }
