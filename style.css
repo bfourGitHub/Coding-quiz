@@ -51,9 +51,12 @@
 
 button {
     border-style: solid;
+    background-color: cadetblue;
     border-width: 1.5px;
     border-radius: 3px;
-    border-color: red;
+    border-color: transparent;
+    opacity: .7;
+    color: #ffffff;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -76,5 +79,18 @@ button {
 
 .answerButtons {
     display: flex;
-    width: 52%;
+    width: 300px;
+    padding: 10px;
+    background-color: cadetblue;
+    color: #ffffff;
+    border-color: transparent;
+    opacity: .7;
+
+}
+
+p {
+    margin-bottom: 30px;
+    max-width: 625px;
+    line-height: 1.5;
+    font-size: 1.1em;
 }
