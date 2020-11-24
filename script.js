@@ -40,39 +40,39 @@ var questions = [
   }
 ];
 
-
+//Set a time that allows a certain amount of time for each question
 var timeRemaining = questions.length * 15;
-//var timeRemaining = 5;
+
 var rightAnswer = 0;
 function displayQuestions() {
   // Creating an html elements <p> and <button> for each answer and checks
   if (questionIndex === questions.length) {
     console.log("quiz done");
-    //clearInterval(interval);
     timerEl.innerHTML = "You've completed the POP quiz!"
     highScoreInput();
+    
   }
   else {
 
-    
+    //Creating elements for the question to append to 
     var questionTitle = document.createElement("P")
     questionTitle.textContent = questions[questionIndex].title;
-    
     mainEl.append(questionTitle);
+    
   
     var rightOrWrongDisplay = document.createElement("P");
     
-
+    //Function to loop thru the questions and append new buttons and answers to the page
   for (var i = 0; questions[questionIndex].choices[i]; i++) {
-    //console.log(questions[questionIndex].choices[i]);
+    
     var choiceButton = document.createElement("BUTTON");
     choiceButton.textContent = questions[questionIndex].choices[i];
     choiceButton.classList.add("answerButtons");
     mainEl.append(choiceButton);
     choiceButton.addEventListener("click", function (e) {
       console.log(questionIndex);
-      //console.log(e.target.textContent);
-
+      
+      // If the time runs out the quiz ends and takes you to highScoreInput page upon clicking anything
       if (timeRemaining <= 0){
         //clearInterval(interval);
         console.log("Shawn Mendez")
@@ -81,6 +81,7 @@ function displayQuestions() {
           
       }
 
+      //Checking the user answers against the corrrect answer
       else if (e.target.textContent === questions[questionIndex].answer) {
         console.log("correct");
         rightOrWrongDisplay.textContent = "Correct";
@@ -105,10 +106,10 @@ function displayQuestions() {
   }
 };
 
+//Append the user initials to the page also adds headings that prompt the user to add their initals
 function highScoreInput () {
   mainEl.innerHTML = `<h3>Enter your Initials!</h3> <br> <input id= "userInitials"><br><button id= "saveUserInitials" onclick="saveUserInitials()">Save</button> <br> <h3>High Scores:</h3>`
   clearInterval(interval);
-  
 };
 
 function saveUserInitials () {
@@ -127,7 +128,7 @@ function saveUserInitials () {
   document.getElementById("highScoresPage").innerHTML=tempUserDetails
 };
 
-
+// This function creates the timer and appends it to the page
 function startTimer() {
   //setTime();
 
