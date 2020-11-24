@@ -19,7 +19,7 @@ var questions = [
     answer: 'var taylorSwiftAmaWins = 32'
   },
   {
-    title: "There are many iconic red carpet looks. Arguably one of the most iconic was worn by Britney Spears and Justin Timberlake to the 2001 AMAs. What did they wear?",
+    title: "There are many iconic red carpet looks. Arguably, one of the most iconic was worn by Britney Spears and Justin Timberlake to the 2001 AMAs. What did they wear?",
     choices: ["All white, with pearls.", "Matching denim-on-denim", "Matching black and white pant-suits", "Black lace and leather"],
     answer: "Matching denim-on-denim"
   },
@@ -106,7 +106,7 @@ function displayQuestions() {
 };
 
 function highScoreInput () {
-  mainEl.innerHTML = `<input id= "userInitials">  <button id= "saveUserInitials" onclick="saveUserInitials()">Save</button> <br> <h3>High Scores:</h3>`
+  mainEl.innerHTML = `<h3>Enter your Initials!</h3> <br> <input id= "userInitials">  <button id= "saveUserInitials" onclick="saveUserInitials()">Save</button> <br> <h3>High Scores:</h3>`
   clearInterval(interval);
   
 };
