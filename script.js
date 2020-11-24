@@ -15,8 +15,8 @@ var questions = [
   },
   {
     title: "Declare the variable 'taylorSwiftAmaWins' and give it the value equal to the number of AMAs Taylor Swift currently holds.",
-    choices: ['var Taylor-Swift-32 = taylorSwiftAmaWins', 'taylorSwiftAmaWins = 23amas', 'var taylorSwiftAmaWins = 32', 'var = taylorSwiftAmaWins(32)'],
-    answer: 'var taylorSwiftAmaWins = 32'
+    choices: ['var Taylor-Swift-32 = taylorSwiftAmaWins', 'taylorSwiftAmaWins = 23amas', 'var taylorSwiftAmaWins = 32;', 'var = taylorSwiftAmaWins(32)'],
+    answer: 'var taylorSwiftAmaWins = 32;'
   },
   {
     title: "There are many iconic red carpet looks. Arguably, one of the most iconic was worn by Britney Spears and Justin Timberlake to the 2001 AMAs. What did they wear?",
@@ -106,7 +106,7 @@ function displayQuestions() {
 };
 
 function highScoreInput () {
-  mainEl.innerHTML = `<h3>Enter your Initials!</h3> <br> <input id= "userInitials">  <button id= "saveUserInitials" onclick="saveUserInitials()">Save</button> <br> <h3>High Scores:</h3>`
+  mainEl.innerHTML = `<h3>Enter your Initials!</h3> <br> <input id= "userInitials"><br><button id= "saveUserInitials" onclick="saveUserInitials()">Save</button> <br> <h3>High Scores:</h3>`
   clearInterval(interval);
   
 };
